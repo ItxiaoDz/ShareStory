@@ -37,7 +37,10 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-//$route['user/(:any)'] = 'user/view/$1';
+$route['user_signup/(:any)'] = 'user/user_ctrl/user_signup/$1';
+$route['user_login/(:any)/(:any)/(:any)'] = 'user/user_ctrl/user_login/$1/$2/$3';
+$route['user_ctrl/(:any)/(:any)'] = 'user/user_ctrl/getuserbynameandpwd/$1/$2';
+$route['user_ctrl/(:any)'] = 'user/user_ctrl/getuserbyid/$1';
 $route['user_ctrl'] = 'user/user_ctrl';
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
